@@ -5,8 +5,13 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.napier.devops</groupId>
-    <artifactId>devops</artifactId>
-    <version>0.1.0.4</version>
+    <artifactId>devops_employees</artifactId>
+    <version>0.1.0.3</version>
+
+    <properties>
+        <maven.compiler.source>10</maven.compiler.source>
+        <maven.compiler.target>10</maven.compiler.target>
+    </properties>
 
     <dependencies>
         <dependency>
@@ -21,13 +26,20 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
-    <properties>
-        <maven.compiler.source>10</maven.compiler.source>
-        <maven.compiler.target>10</maven.compiler.target>
-    </properties>
 
     <build>
         <plugins>
+            <plugin>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>3.2.0</version>
+                <executions>
+                    <execution>
+                        <id>default-jar</id>
+                        <!-- skip building the default-jar-->
+                        <phase>none</phase>
+                    </execution>
+                </executions>
+            </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-assembly-plugin</artifactId>
@@ -54,7 +66,6 @@
                     </execution>
                 </executions>
             </plugin>
-
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
@@ -72,7 +83,6 @@
                     </dependency>
                 </dependencies>
             </plugin>
-
             <plugin>
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
@@ -92,9 +102,6 @@
                     </execution>
                 </executions>
             </plugin>
-
         </plugins>
     </build>
-
-
 </project>
