@@ -143,7 +143,8 @@ public class App {
                             "AND dept_emp.dept_no = departments.dept_no " +
                             "AND salaries.to_date = '9999-01-01' " +
                             "AND departments.dept_no = '" + dept.dept_no + "' " +
-                            "ORDER BY employees.emp_no ASC";
+                            "ORDER BY employees.emp_no ASC " +
+                            "LIMIT 50";
             // Execute SQL statement
             ResultSet rset = stmt.executeQuery(strSelect);
             // Extract employee information
