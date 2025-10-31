@@ -7,3 +7,5 @@ READ ME FILE :)
 [![Releases](https://img.shields.io/github/release/benjaminrisbey/sem/all.svg?style=flat-square)](https://github.com/benjaminrisbey/sem/releases)
 
 ![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/benjaminrisbey/sem/main.yml?branch=develop)
+
+[![codecov](https://codecov.io/gh/benjaminrisbey/sem/graph/badge.svg?token=9JC4XXJTVA)](https://codecov.io/gh/benjaminrisbey/sem)
