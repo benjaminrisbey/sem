@@ -230,37 +230,21 @@ public class App {
 
 
     public static void main(String[] args) {
-        // Create new Application
+        // Create new Application and connect to database
         App a = new App();
 
-        // Connect to database
-        a.connect();
+        if(args.length < 1){
+            a.connect("localhost:33060", 5000);
+        }else{
+            a.connect(args[0], Integer.parseInt(args[1]));
+        }
 
-        // Extract employee salary information
-        ArrayList<Employee> employees = a.getAllSalaries();
+        Department dept = a.getDepartment("Development");
+        ArrayList<Employee> employees = a.getSalariesByDepartment(dept);
 
+
+        // Print salary report
         a.printSalaries(employees);
-
-        System.out.println("--------------------------------------------------------------------");
-
-        System.out.println("NEW LINE");
-
-        System.out.println("--------------------------------------------------------------------");
-
-
-        System.out.println("TEST");
-
-        Department salesDept = a.getDepartment("Sales");
-
-
-        System.out.println("Department Name: " + salesDept.dept_name);
-
-        ArrayList<Employee> deptSalaries = a.getSalariesByDepartment(salesDept);
-
-        a.printSalaries(deptSalaries);
-
-        // Test the size of the returned data - should be 240124
-        System.out.println(employees.size());
 
         // Disconnect from database
         a.disconnect();
