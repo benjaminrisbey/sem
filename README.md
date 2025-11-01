@@ -1,4 +1,4 @@
-READ ME FILE :)
+READ ME FILE
 
 ![workflow](https://github.com/benjaminrisbey/sem/actions/workflows/main.yml/badge.svg)
 
