@@ -1,4 +1,4 @@
-FROM openjdk:latest
+FROM openjdk:11-jdk
 COPY ./target/devops.jar /tmp
 WORKDIR /tmp
 ENTRYPOINT ["java", "-jar", "devops.jar", "db:3306", "30000"]
