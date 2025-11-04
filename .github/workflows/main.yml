@@ -3,7 +3,6 @@ on:
   push:
     branches:
       - master
-      - webApp
 jobs:
   UnitTests:
     name: Unit Tests
